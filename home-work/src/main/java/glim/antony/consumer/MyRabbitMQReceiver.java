@@ -1,14 +1,17 @@
-package glim.antony.client;
+package glim.antony.consumer;
 
 import java.util.Scanner;
 
-public class MyRabbitMQClient {
+public class MyRabbitMQReceiver {
+
+    private final static String FIRST_CH_NAME = "firstCH";
+    private final static String SECOND_CH_NAME = "secondCH";
 
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Введите название канала...");
+        System.out.println("Введите название канала... (\"firstCH\" или \"secondCH\")");
         String chanelName = scanner.nextLine();
         while (true){
             String msg = scanner.nextLine();

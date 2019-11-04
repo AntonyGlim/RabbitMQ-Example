@@ -47,3 +47,19 @@
 /chch new_channel1 (change channel) пользователь  
 может перейти в другой канал. Реализовать это  
 в виде консольного приложения.
+
+**Выполнение**  
+Установка erlang  
+https://onstartup.ru/interpretatory/erlang/  
+
+Установка rabbitmq-server  
+https://computingforgeeks.com/how-to-install-latest-rabbitmq-server-on-ubuntu-18-04-lts/  
+Подключение плагина. Плсле его подключения:  
+Стучим на http://localhost:15672  
+Можем зайти под login: guest; password: guest или создать юзера через командную строку  
+$ sudo rabbitmqctl add_user admin admin  
+Creating user "admin"  
+$ sudo rabbitmqctl set_user_tags admin administrator  
+#Setting tags for user "admin" to administrator:    
+$ sudo rabbitmqctl set_permissions admin ".*" ".*" ".*"
+Setting permissions for user "admin" in vhost "/"
